@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://android.com"
+    xmlns:app="http://android.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SHINIZER DJ MIX (MP3 / MP4)"
+            android:textColor="#00E676"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="#000000"
+            android:layout_marginBottom="10dp">
+
+            <androidx.media3.ui.PlayerView
+                android:id="@+id/playerViewA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:use_controller="false" />
+
+            <androidx.media3.ui.PlayerView
+                android:id="@+id/playerViewB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.0"
+                app:use_controller="false" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvCrossfader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CROSSFADER: DECK A (100%) | DECK B (0%)"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/crossfaderSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:layout_marginBottom="14dp" />
+
+        <!-- DECK A -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvTrackA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DECK A: Hakuna wimbo"
+                android:textColor="#00B0FF"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <Button
+                    android:id="@+id/btnLoadLocalA"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Simu (MP3/MP4)"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnLoadUrlA"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Online Link"
+                    android:textSize="11sp"
+                    android:layout_marginStart="4dp" />
+
+                <Button
+                    android:id="@+id/btnPlayPauseA"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Play / Pause"
+                    android:textSize="11sp"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed / Pitch (Deck A)"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <SeekBar
+                android:id="@+id/speedSeekA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="50" />
+        </LinearLayout>
+
+        <!-- DECK B -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvTrackB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DECK B: Hakuna wimbo"
+                android:textColor="#FF4081"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <Button
+                    android:id="@+id/btnLoadLocalB"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Simu (MP3/MP4)"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnLoadUrlB"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Online Link"
+                    android:textSize="11sp"
+                    android:layout_marginStart="4dp" />
+
+                <Button
+                    android:id="@+id/btnPlayPauseB"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Play / Pause"
+                    android:textSize="11sp"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed / Pitch (Deck B)"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <SeekBar
+                android:id="@+id/speedSeekB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="50" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
